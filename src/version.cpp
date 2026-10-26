@@ -1,7 +1,6 @@
 #include "uincampus/version.hpp"
 
-namespace uin
-{
+namespace uin {
 
 std::string_view version()
 {
