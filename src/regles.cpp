@@ -1,4 +1,4 @@
-#include "uincampus/regles.hpp"
+#include "../include/uincampus/regles.hpp"
 
 namespace uin {
 

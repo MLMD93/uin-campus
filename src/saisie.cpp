@@ -1,4 +1,4 @@
-#include "uincampus/saisie.hpp"
+#include "../include/uincampus/saisie.hpp"
 
 #include "uincampus/regles.hpp"
 
