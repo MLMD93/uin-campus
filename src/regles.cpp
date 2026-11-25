@@ -1,22 +1,16 @@
-#include "../include/uincampus/regles.hpp"
+#include "uincampus/regles.hpp"
 
 namespace uin {
 
 Mention mentionPour(double moyenne)
 {
-    if (moyenne < seuilValidation) {
-        return Mention::Ajourne;
+    int rang{0};
+    for (double seuil : seuilsMentions) {
+        if (moyenne >= seuil) {
+            ++rang;
+        }
     }
-    if (moyenne < 12.0) {
-        return Mention::Passable;
-    }
-    if (moyenne < 14.0) {
-        return Mention::AssezBien;
-    }
-    if (moyenne < 16.0) {
-        return Mention::Bien;
-    }
-    return Mention::TresBien;
+    return static_cast<Mention>(rang);
 }
 
 std::string_view libelle(Mention mention)
